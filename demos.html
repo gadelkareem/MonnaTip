@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<title>MonnaTip Demos</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.monnaTip.js"></script>
+        <style type="text/css">
+            body{
+                padding: 100px;
+            }
+            .tip{
+                position: absolute;
+                z-index: 100000;
+                border: 1px solid #444444; /*1px solid #FFD5AA;*/
+                background: #000; /* #F8FFBF;*/
+                color: #fff;  /*#000;*/
+                font: bold 80%/1 Arial;
+                padding: 5px;
+                display: none;
+                white-space: nowrap;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+                opacity: 0.9;
+                filter: alpha(opacity=90);
+            }
+        </style>
+	<script type="text/javascript">
+    
+		$(function(){
+                        
+			$('*[title]').monnaTip();
+		});
+	</script>
+</head>
+<body>
+    <h1 title="monnaTip demos"> monnaTip Demos</h1>
+	<a href="http://gadelkareem.com" title="Gadelkareem Website">This is a Blog link</a><br /><br />
+	<a href="http://gadelkareem.com/photos/album/shot/page/1/photo/fish-market/" title="&lt;img src='http://farm4.static.flickr.com/3405/3658506379_38e4f767d9_m.jpg' /&gt;">This is an image</a><br />
+        <div style="text-align:right"><a href="http://gadelkareem.com/photos/album/shot/page/1/photo/fish-market/" title="&lt;img src='http://farm4.static.flickr.com/3405/3658506379_38e4f767d9_m.jpg' /&gt;">This is an image on the right</a><br /></div>
+
+        <br />
+        <h4 title="form example">This is a form</h4>
+        <form>
+            <fieldset>
+                <input type="text" name="firstname" title="First name:" />
+                <br />
+                <label title="male"><input type="radio" name="sex" value="male" title="male" />Male</label>
+                <br />
+                <textarea rows="10" cols="30" title="This a text area"> This a text area </textarea>
+                <br />
+                <input type="submit" value="Submit" title="submit"/>
+            </fieldset>
+        </form>
+        <br />
+        <h4 title="generate links">create new links</h4>
+        <a href="#" title="Create new link" onclick="$(this).after($(this).clone().attr('title','this is new link') );return false;" style="display:block">click to create new link</a>
+        <div style="height:1000px" ><h4 title="Check bottom link ( scroll down )">Bottom links</h4></div>
+        <div style="text-align:right"><a href="http://gadelkareem.com/photos/album/shot/page/1/photo/fish-market/" title="&lt;img src='http://farm4.static.flickr.com/3405/3658506379_38e4f767d9_m.jpg' /&gt;">This is an image on the bottom right</a><br /></div>
+        <img src="http://farm4.static.flickr.com/3405/3658506379_38e4f767d9_m.jpg" style="display:none" />;
+</body>
+</html>
